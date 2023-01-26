@@ -8,10 +8,9 @@ const BASE_URL = "http://localhost:3500/api";
 
 /*
 A custom hook to handle API calls and can be used anywhere in the application 
-and implement a separation of concern
-If code 429 appeared on the screen then that means "too many requests" and reached the request 
-limit for the day, So I implemented a backup dummy data if the API call fails at least 3 times. 
-By doing so, I enure the service is not interrupted until the API call get fixed or back to service
+and implement a separation of concern and most importantly is to not repeat myself. Calling 
+few end points is needed througout the application and by implementing a customer hook I can 
+produce a cleaner code
 */
 export const useFetchDataFromBackend = (url) => {
   const [data, setData] = useState([]);
