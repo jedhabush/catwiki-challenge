@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import path from "path";
 import express from "express";
 import breedsRoute from "./routes/breedsRoute.js";
+import cors from "cors";
 
 const PORT = process.env.PORT || 3500;
 
@@ -12,8 +13,9 @@ app.get("/api", (req, res) => {
   res.json({ message: "Page is OK and running" });
 });
 
-//middlewares
+//middlewares and http setup
 app.use(express.json());
+app.use(cors());
 app.use("/api/breeds/", breedsRoute);
 
 // handle error requests
