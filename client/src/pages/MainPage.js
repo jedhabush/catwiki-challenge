@@ -1,13 +1,16 @@
 import React from "react";
 import axios from "axios";
 import Searchbar from "../components/Searchbar";
+import CatCards from "../components/CatCards";
+
 import { useEffect, useState } from "react";
 import { useFetchDataFromBackend } from "../utils/useFetchDataFromBackend";
 import { Link } from "react-router-dom";
+import { Stack, Typography, Box } from "@mui/material";
 
 const MainPage = () => {
-  //State that handles the limit of the results
-  const [limit, setLimit] = useState(1);
+  /* //State that handles the limit of the results
+  const [limit, setLimit] = useState(1); */
 
   const { data, loading, error } = useFetchDataFromBackend(`breeds`);
   const [breeds, setBreeds] = useState([]);
@@ -24,18 +27,20 @@ const MainPage = () => {
     return <p>{error.message}</p>;
   }
 
-  // Handle see more button when clicked
+  /* // Handle see more button when clicked
   const handleSeeMore = () => {
     setLimit(limit + 3);
   };
 
   //Slice the result to limited search
-  const limitedData = breeds.slice(0, limit);
+  const limitedData = breeds.slice(0, limit); */
   return (
-    <div>
+    <Box>
       <Searchbar />
       <br />
-      <div>
+      <CatCards breeds={breeds} loading={loading} />
+
+      {/* <div>
         <p>Fetching Cats names and photos</p>
         {!loading &&
           limitedData.map((breed) => (
@@ -50,8 +55,8 @@ const MainPage = () => {
           ))}
 
         <button onClick={handleSeeMore}>See More</button>
-      </div>
-    </div>
+      </div> */}
+    </Box>
   );
 };
 

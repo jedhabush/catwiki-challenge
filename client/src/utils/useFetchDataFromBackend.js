@@ -9,7 +9,7 @@ const BASE_URL = "http://localhost:3500/api";
 /*
 A custom hook to handle API calls and can be used anywhere in the application 
 and implement a separation of concern and most importantly is to not repeat myself. Calling 
-few end points is needed througout the application and by implementing a customer hook I can 
+few end points is needed througout the application and by implementing a custom hook I can 
 produce a cleaner code
 */
 export const useFetchDataFromBackend = (url) => {
