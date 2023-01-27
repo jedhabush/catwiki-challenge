@@ -30,7 +30,7 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 
 ## Server:
 
-- ExpressJs: It provides a minimalistic and flexible framework for building web applications and APIs. It includes routing and middleware functions that make it easy to handle HTTP requests and responses, as well as other features such as: <br/>
+- **ExpressJs**: It provides a minimalistic and flexible framework for building web applications and APIs. It includes routing and middleware functions that make it easy to handle HTTP requests and responses, as well as other features such as: <br/>
 
 1- Handling different types of HTTP requests (GET, POST, PUT, DELETE, etc.) <br/>
 2- Serving static files <br/>
@@ -39,11 +39,11 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 5- CORS <br/>
 6- Support for template engines <br/>
 
-- Express-async-handler: This package catch any errors thrown by the async function and pass it to the next middleware for proper handling, it also makes sure that the promise returned by async function is awaited before the response is sent to the client. <br/>
+- **Express-async-handler**: This package catch any errors thrown by the async function and pass it to the next middleware for proper handling, it also makes sure that the promise returned by async function is awaited before the response is sent to the client. <br/>
 
-- Nodemon: I love nodemon, it makes my life easier for sure. Nodemon is used to monitor the changes in the file system and automatically restarts the application when it detects a change. It can watch for changes in the source code, configuration files, and other files that are part of the application. This allows developers to make changes to the code and see the results immediately, without having to manually stop and restart the application. <br/>
+- **Nodemon**: I love nodemon, it makes my life easier for sure. Nodemon is used to monitor the changes in the file system and automatically restarts the application when it detects a change. It can watch for changes in the source code, configuration files, and other files that are part of the application. This allows developers to make changes to the code and see the results immediately, without having to manually stop and restart the application. <br/>
 
-- Axios: Provides a simple, easy-to-use API for making HTTP requests. <br/>
+- **Axios**: Provides a simple, easy-to-use API for making HTTP requests. <br/>
   It supports features such as: <br/>
 
 1- Automatic transformation of request and response data <br/>
@@ -54,7 +54,7 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 6- Automatic handling of timeout <br/>
 7- Automatic handling of withCredentials <br/>
 
-- Body-parser: Is a middleware for Express.js, a popular web framework for Node.js, that parses incoming request bodies in a middleware before your handlers.<br/>
+- **Body-parser**: Is a middleware for Express.js, a popular web framework for Node.js, that parses incoming request bodies in a middleware before your handlers.<br/>
   It can parse the following types of data: <br/>
 
 1- JSON <br/>
@@ -62,15 +62,15 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 3- Text <br/>
 4- URL-encoded data <br/>
 
-- CORS: Allows servers to specify who can access its resources, and how. By default, CORS blocks all cross-origin requests, unless the server explicitly allows them by returning the appropriate CORS headers. <br/>
+- **CORS**: Allows servers to specify who can access its resources, and how. By default, CORS blocks all cross-origin requests, unless the server explicitly allows them by returning the appropriate CORS headers. <br/>
 
-- Dotenv: Is a Node.js package that is used to load environment variables from a .env file into the process.env object. The process.env object contains environment-specific information such as the operating system, paths, and environment variables. <br/>
+- **Dotenv**: Is a Node.js package that is used to load environment variables from a .env file into the process.env object. The process.env object contains environment-specific information such as the operating system, paths, and environment variables. <br/>
 
 ## Client:
 
-- ReactJs
-- Material UI: I enjoy using MUI. It provides a set of pre-built, reusable components for building user <br/>interfaces with a Material Design look and feel. <br/>
-- Custom Hook: To fetch data from the backend and resuse it anywhere in the application. <br/>
+- **ReactJs**
+- **Material UI**: I enjoy using MUI. It provides a set of pre-built, reusable components for building user <br/>interfaces with a Material Design look and feel. <br/>
+- **Custom Hook**: To fetch data from the backend and resuse it anywhere in the application. <br/>
 
 # Improvements
 
