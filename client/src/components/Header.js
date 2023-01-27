@@ -5,19 +5,37 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <Box
-      overflow="hidden"
       width="100%"
-      p={5}
+      pb={5}
       sx={{
         backgroundColor: "#585e6e",
+
         textAlign: "center",
       }}
     >
-      <Link to="/">
-        <img src="https://thecatapi.com/favicon.ico" alt="logo" />
-      </Link>
+      <Box
+        sx={{
+          pt: "10px",
+        }}
+      >
+        <Link to="/">
+          <img
+            src="https://thecatapi.com/favicon.ico"
+            alt="logo"
+            height="50px"
+          />
+        </Link>
 
-      <Typography>CatWiki</Typography>
+        <Typography
+          sx={{
+            mt: "10px",
+            fontFamily: "Righteous",
+            fontSize: "30px",
+          }}
+        >
+          CatWiki
+        </Typography>
+      </Box>
     </Box>
   );
 };

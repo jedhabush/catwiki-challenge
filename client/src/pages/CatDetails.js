@@ -4,23 +4,52 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Stack, Typography, Box, Rating } from "@mui/material";
 
 const CatDetails = () => {
-  const [breed, setBreeds] = useState({});
+  const [breed, setBreed] = useState({});
+
   const { name } = useParams();
   const { data, loading, error } = useFetchDataFromBackend(`breeds/${name}`);
 
   //Verify the data is loading before setting the breeds state
   useEffect(() => {
-    if (!loading && data) {
-      setBreeds(data[0]);
+    if (!loading && data && name) {
+      setBreed(data[0]);
     }
   }, [data, loading, name]);
+
+  if (loading) {
+    return (
+      <Box sx={{ height: "100vh" }}>
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontFamily: "Righteous",
+            fontSize: "50px",
+          }}
+          p={5}
+        >
+          Loading kitties...
+        </Typography>
+      </Box>
+    );
+  }
+
+  //Check if breed does not have details then return a message
+  if (!breed) {
+    return (
+      <Box sx={{ height: "100vh" }}>
+        <Typography sx={{ textAlign: "center", fontFamily: "Righteous" }} p={5}>
+          No Result Found about This Breed Sorry!!
+        </Typography>
+      </Box>
+    );
+  }
 
   // This is coming from the useFetchDataFromBackend and show error if there's any
   if (error) {
     return <p>{error.message}</p>;
   }
 
-  console.log(data[0], "DATA ON CatDETAILS");
+  console.log(breed, "DATA ON CatDETAILS");
   return (
     <Box>
       <Typography
@@ -30,10 +59,16 @@ const CatDetails = () => {
         textAlign="center"
         width="100%"
       >
-        {breed.name}
+        {breed?.name}
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <img src={breed.image} alt="cat" width="500" height="600" />
+        <img
+          src={breed?.image}
+          alt="cat"
+          width="500"
+          height="600"
+          style={{ borderRadius: "5%" }}
+        />
       </Box>
 
       <Typography
@@ -45,7 +80,7 @@ const CatDetails = () => {
         sx={{ fontSize: { lg: "24px", xs: "17px" } }}
         textAlign="center"
       >
-        {breed.description}
+        {breed?.description}
       </Typography>
       <Box>
         <Typography
@@ -56,7 +91,7 @@ const CatDetails = () => {
           textAlign="center"
         >
           <strong>Temperament: </strong>
-          {breed.temperament}
+          {breed?.temperament}
         </Typography>
         <Typography
           mb={1}
@@ -65,7 +100,7 @@ const CatDetails = () => {
           mt="41px"
           textAlign="center"
         >
-          <strong>Origin:</strong> {breed.origin}
+          <strong>Origin:</strong> {breed?.origin}
         </Typography>
         <Typography
           mb={1}
@@ -74,7 +109,7 @@ const CatDetails = () => {
           mt="41px"
           textAlign="center"
         >
-          <strong>Life Span:</strong> {breed.life_span} Years
+          <strong>Life Span:</strong> {breed?.life_span} Years
         </Typography>
         <Typography
           mb={1}
@@ -83,8 +118,8 @@ const CatDetails = () => {
           mt="41px"
           textAlign="center"
         >
-          <strong>Adaptability:</strong>{" "}
-          <Rating name="read-only" value={breed.adaptability} readOnly />
+          <strong>Adaptability:</strong>
+          <Rating name="read-only" value={breed?.adaptability || 0} readOnly />
         </Typography>
         <Typography
           mb={1}
@@ -94,7 +129,11 @@ const CatDetails = () => {
           textAlign="center"
         >
           <strong>Affection Level:</strong>{" "}
-          <Rating name="read-only" value={breed.affection_level} readOnly />
+          <Rating
+            name="read-only"
+            value={breed?.affection_level || 0}
+            readOnly
+          />
         </Typography>
         <Typography
           mb={1}
@@ -104,7 +143,11 @@ const CatDetails = () => {
           textAlign="center"
         >
           <strong>Child-friendly:</strong>{" "}
-          <Rating name="read-only" value={breed.child_friendly} readOnly />
+          <Rating
+            name="read-only"
+            value={breed?.child_friendly || 0}
+            readOnly
+          />
         </Typography>
         <Typography
           mb={1}
@@ -114,7 +157,7 @@ const CatDetails = () => {
           textAlign="center"
         >
           <strong> Grooming:</strong>
-          <Rating name="read-only" value={breed.grooming} readOnly />
+          <Rating name="read-only" value={breed?.grooming || 0} readOnly />
         </Typography>
         <Typography
           mb={1}
@@ -124,7 +167,7 @@ const CatDetails = () => {
           textAlign="center"
         >
           <strong> Intelligence:</strong>{" "}
-          <Rating name="read-only" value={breed.intelligence} readOnly />
+          <Rating name="read-only" value={breed?.intelligence || 0} readOnly />
         </Typography>
         <Typography
           mb={2}
@@ -135,7 +178,7 @@ const CatDetails = () => {
           textAlign="center"
         >
           <strong>Health Issues:</strong>{" "}
-          <Rating name="read-only" value={breed.health_issues} readOnly />
+          <Rating name="read-only" value={breed?.health_issues || 0} readOnly />
         </Typography>
       </Box>
     </Box>

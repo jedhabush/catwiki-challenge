@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useFetchDataFromBackend } from "../utils/useFetchDataFromBackend";
 import { Link } from "react-router-dom";
 import { Stack, Typography, Box } from "@mui/material";
+import { fontSize } from "@mui/system";
 
 const MainPage = () => {
   /* //State that handles the limit of the results
@@ -22,6 +23,22 @@ const MainPage = () => {
     }
   }, [data, loading]);
 
+  if (loading) {
+    return (
+      <Box sx={{ height: "100vh" }}>
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontFamily: "Righteous",
+            fontSize: "50px",
+          }}
+          p={5}
+        >
+          Loading kitties...
+        </Typography>
+      </Box>
+    );
+  }
   // This is coming from the useFetchDataFromBackend and show error if there's any
   if (error) {
     return <p>{error.message}</p>;

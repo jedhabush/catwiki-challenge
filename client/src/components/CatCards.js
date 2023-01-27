@@ -52,6 +52,7 @@ const CatCards = ({ breeds, loading }) => {
                   src={`${breed.image}?w=48&fit=crop&auto=format`}
                   alt={breed.name}
                   loading="lazy"
+                  style={{ borderRadius: "5%" }}
                 />
 
                 <ImageListItemBar
