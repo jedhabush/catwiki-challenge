@@ -32,12 +32,12 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 
 - ExpressJs: It provides a minimalistic and flexible framework for building web applications and APIs. It includes routing and middleware functions that make it easy to handle HTTP requests and responses, as well as other features such as: <br/>
 
-- Handling different types of HTTP requests (GET, POST, PUT, DELETE, etc.) <br/>
-- Serving static files <br/>
-- Parsing request bodies <br/>
-- Handling cookies and sessions <br/>
-- CORS <br/>
-- Support for template engines <br/>
+1- Handling different types of HTTP requests (GET, POST, PUT, DELETE, etc.) <br/>
+2- Serving static files <br/>
+3- Parsing request bodies <br/>
+4- Handling cookies and sessions <br/>
+5- CORS <br/>
+6- Support for template engines <br/>
 
 - Express-async-handler: This package catch any errors thrown by the async function and pass it to the next middleware for proper handling, it also makes sure that the promise returned by async function is awaited before the response is sent to the client. <br/>
 
@@ -46,21 +46,21 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 - Axios: Provides a simple, easy-to-use API for making HTTP requests. <br/>
   It supports features such as: <br/>
 
-- Automatic transformation of request and response data <br/>
-- Automatic handling of JSON data <br/>
-- Automatic handling of errors <br/>
-- Automatic handling of HTTP interceptors <br/>
-- Automatic handling of request and response headers <br/>
-- Automatic handling of timeout <br/>
-- Automatic handling of withCredentials <br/>
+1- Automatic transformation of request and response data <br/>
+2- Automatic handling of JSON data <br/>
+3- Automatic handling of errors <br/>
+4- Automatic handling of HTTP interceptors <br/>
+5- Automatic handling of request and response headers <br/>
+6- Automatic handling of timeout <br/>
+7- Automatic handling of withCredentials <br/>
 
 - Body-parser: Is a middleware for Express.js, a popular web framework for Node.js, that parses incoming request bodies in a middleware before your handlers.<br/>
   It can parse the following types of data: <br/>
 
-- JSON <br/>
-- Raw <br/>
-- Text <br/>
-- URL-encoded data <br/>
+1- JSON <br/>
+2- Raw <br/>
+3- Text <br/>
+4- URL-encoded data <br/>
 
 - CORS: Allows servers to specify who can access its resources, and how. By default, CORS blocks all cross-origin requests, unless the server explicitly allows them by returning the appropriate CORS headers. <br/>
 
@@ -74,7 +74,7 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 
 # Improvements
 
-There are a lot of things I can improve on the current version of the app. Among these improvements are
+There are a lot of things I can improve on the current version of the app. Among these improvements are <br/>
 1- Enhance the UI and make it more responsive. <br/>
 2- Add more functionalities such as allowing users to vote for their favourite cat photo and produce the most voted photos. <br/>
 3- Merge the dog API as well so users can have double joy by searching for dogs and cats lol <br/>
