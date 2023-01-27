@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 axiosRetry(axios, { retries: 3 });
 
-const BASE_URL = "https://catwikipage-api.onrender.com";
+const BASE_URL = "https://catwikipage-api.onrender.com/api";
 
 /*
 A custom hook to handle API calls and can be used anywhere in the application 
