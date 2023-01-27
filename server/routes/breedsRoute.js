@@ -14,6 +14,6 @@ They are placed in one file
 */
 router.route("/:name").get(breedsName);
 router.route("/").get(catBreeds);
-router.route("/allbreednames").get(allBreeds);
+router.route("/allbreedsresults").get(allBreeds);
 
 export default router;

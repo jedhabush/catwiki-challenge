@@ -77,4 +77,4 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 There are a lot of things I can improve on the current version of the app. Among these improvements are <br/>
 1- Enhance the UI and make it more responsive. <br/>
 2- Add more functionalities such as allowing users to vote for their favourite cat photo and produce the most voted photos. <br/>
-3- Merge the dog API as well so users can have double joy by searching for dogs and cats lol <br/>
+3- Merge the dog API as well so users can have double the joy by searching for both dogs and cats. lol <br/>
