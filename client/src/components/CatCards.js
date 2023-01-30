@@ -37,7 +37,7 @@ const CatCards = ({ breeds, loading }) => {
         mt: "15px",
       }}
     >
-      <Typography variant="h4" sx={{ fontFamily: "Righteous" }}>
+      <Typography variant="h4" sx={{ fontFamily: "Righteous", mr: "11%" }}>
         Fetching cute kitties breeds
       </Typography>
 
@@ -71,10 +71,13 @@ const CatCards = ({ breeds, loading }) => {
           ))}
       </ImageList>
 
-      <Box>
+      <Box sx={{ mr: "11%" }}>
         {/* Display see more button if the data stopped loading */}
         {!loading && (
-          <Button sx={{ fontSize: "30px" }} onClick={handleSeeMore}>
+          <Button
+            sx={{ fontSize: "30px", alignItems: "center" }}
+            onClick={handleSeeMore}
+          >
             See More
           </Button>
         )}
