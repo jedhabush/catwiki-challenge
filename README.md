@@ -2,21 +2,20 @@
 
 # Application Photos
 
-![alt text](https://i.pinimg.com/originals/19/0f/4f/190f4f285333554ea6e578e3fe287fcc.png)
+![alt text](https://i.pinimg.com/originals/b1/bd/d7/b1bdd7f202429ab5623d7581b5341f6d.png)
 
-![alt text](https://i.pinimg.com/originals/26/62/34/26623408c4b2831b0915ab8941535e79.png)
-
-![alt text](https://i.pinimg.com/originals/bb/06/3e/bb063ed84ee953d9ee445ca7320eab19.png)
+![alt text](https://i.pinimg.com/originals/4a/21/4a/4a214a75455779ac94872082c67260eb.png)
 
 # Description
 
 ## User Stories:
 
-- User story: I can search for cat breeds from the homepage. <br/>
 - User story: I can see more photos of the breed on the breed details page. <br/>
 - User story: I can see the breed details including description, temperament, origin, life span, adaptability, affection level, child-friendly, grooming, intelligence, health issues, social needs, stranger friendly <br/> <br/>
 
-Hello Blowfish Studios family, I am grateful for the opportunity you have given me. It was a fun project to develop. I had tons of ideas on how to approach this project, but I decided to keep it straight to the point and simple.
+Hello Blowfish Studios family, I am thankful for the chance you have provided me. The project was enjoyable to work on and I had numerous ideas on how to tackle it. I chose to keep it straightforward and uncomplicated. I must confess that I revised my design several times to make it as perfect as possible. <br/>
+
+Regarding the searchbar, I attempted to build it to fetch data from the backend. I created the component and the code was almost complete, however, I felt it was not meeting my expectations and would require more time for debugging and improvement. I have a passion for working on projects and am open to spending more time on it, but I am also eager for your feedback and the possibility of joining your team. As a person and as a software engineer, if I undertake a task, I prefer to complete it thoroughly rather than doing a half-hearted job. Consequently, I left the search functionality code on the backend and decided to exclude it from the front-end.
 
 ## Server side Notes:
 
@@ -75,6 +74,7 @@ You might notice that I created a custom hook called (useFetchDataFromBackend) t
 # Improvements
 
 There are a lot of things I can improve on the current version of the app. Among these improvements are <br/>
-1- Enhance the UI and make it more responsive. <br/>
+1- Add a searchbar or a drop down menu to choose a breed.
+1- Enhance the UI and make it more responsive. The current design is very minimal <br/>
 2- Add more functionalities such as allowing users to vote for their favourite cat photo and produce the most voted photos. <br/>
 3- Merge the dog API as well so users can have double the joy by searching for both dogs and cats. lol <br/>
