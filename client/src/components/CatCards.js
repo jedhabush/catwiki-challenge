@@ -1,11 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { useFetchDataFromBackend } from "../utils/useFetchDataFromBackend";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import InfoIcon from "@mui/icons-material/Info";
 
 import {
-  Stack,
   Typography,
   Box,
   ImageListItem,
@@ -19,7 +17,7 @@ const CatCards = ({ breeds, loading }) => {
   //State that handles the limit of the results
   const [limit, setLimit] = useState(5);
 
-  //Slice the result to limited search
+  //Slice the data to limited results
   const limitedData = breeds.slice(0, limit);
 
   // Handle see more button when clicked
@@ -40,13 +38,14 @@ const CatCards = ({ breeds, loading }) => {
       }}
     >
       <Typography variant="h4" sx={{ fontFamily: "Righteous" }}>
-        Fetching cute kitties names and photos
+        Fetching cute kitties breeds
       </Typography>
 
       <ImageList sx={{ width: "90%", alignITems: "center" }}>
+        {/* If not loading the map through limitedData array */}
         {!loading &&
           limitedData.map((breed) => (
-            <Link to={`/breeds/${breed.id}`} key={breed.id}>
+            <Link to={`/breeds/${breed.name}`} key={breed.id}>
               <ImageListItem style={{ height: "100%" }}>
                 <img
                   src={`${breed.image}?w=48&fit=crop&auto=format`}
@@ -73,6 +72,7 @@ const CatCards = ({ breeds, loading }) => {
       </ImageList>
 
       <Box>
+        {/* Display see more button if the data stopped loading */}
         {!loading && (
           <Button sx={{ fontSize: "30px" }} onClick={handleSeeMore}>
             See More
@@ -84,12 +84,3 @@ const CatCards = ({ breeds, loading }) => {
 };
 
 export default CatCards;
-
-/* <ul key={breed.id}>
-            <li>
-              <Link to={`/breeds/${breed.id}`}>
-                <strong>{breed.name}</strong>
-              </Link>
-            </li>
-            <img src={breed.image} alt="cat-Image" />
-          </ul> */

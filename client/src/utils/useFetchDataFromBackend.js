@@ -8,7 +8,7 @@ const BASE_URL = "https://catwikipage-api.onrender.com/api";
 
 /*
 A custom hook to handle API calls and can be used anywhere in the application 
-and implement a separation of concern and most importantly is to not repeat myself. Calling 
+and implement a separation of concern and most importantly not repeat myself. Calling 
 few end points is needed througout the application and by implementing a custom hook I can 
 produce a cleaner code
 */
@@ -28,7 +28,7 @@ export const useFetchDataFromBackend = (url) => {
       })
       .catch((error) => {
         setError(error);
-        //--- Measurements to be taken if API call fails 3 times, use dummyData instead---//
+        //--- Measurements to be taken if API call fails 3 times, ---//
         if (error.isRetryable) {
           console.log("Error: Retrying...");
         }

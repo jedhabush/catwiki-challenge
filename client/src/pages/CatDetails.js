@@ -1,7 +1,7 @@
 import { useFetchDataFromBackend } from "../utils/useFetchDataFromBackend";
-import React, { useCallback, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { Stack, Typography, Box, Rating } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Typography, Box, Rating } from "@mui/material";
 
 const CatDetails = () => {
   const [breed, setBreed] = useState({});
@@ -49,7 +49,6 @@ const CatDetails = () => {
     return <p>{error.message}</p>;
   }
 
-  console.log(breed, "DATA ON CatDETAILS");
   return (
     <Box>
       <Typography
